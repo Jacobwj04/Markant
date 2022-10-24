@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8f8681d983.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <title>Markant</title>
+</head>
+<body>
+    <nav class="nav">
+        <img class="nav__img" src="/img/logo-markant-header.png" alt="">
+        <li class="nav__listItem"><a href="" class="nav__links">Home</a></li>
+        <li class="nav__listItem"><a href="#info" class="nav__links">Info</a></li>
+        <li class="nav__listItem"><a href="#agenda" class="nav__links">Agenda</a></li>
+        <li class="nav__listItem"><a href="" class="nav__links">Contact</a></li>
+        <li class="nav__listItem"><button class="nav__button">Inloggen</button></li>
+        <li class="nav__listItem"><button class="nav__button">Aanmelden</button></li>
+    </nav>
+    <header class="header">
+        <section class="header__banner">
+            <img class="banner__img" src="" alt="">
+            <article class="banner__text">
+                <h1 class="header__h1">Voor Mantelzorgers</h1>
+                <h2 class="header__h2">
+                    Zorg je voor een naaste en
+                    zoek je ondersteuning, informatie
+                    of advies? Markant helpt je graag!
+                </h2>
+                <button class="header__button">Aanmelden als vrijwilliger</button>
+            </article>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L80,202.7C160,213,320,235,480,229.3C640,224,800,192,960,181.3C1120,171,1280,181,1360,186.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        </section>
+    </header>
+    <section id="info" class="info">
+        <article class="info__header">
+            <h2 class="info__h2">
+                Markant
+            </h2>
+        </article>
+        <article class="info__text">
+            <p class="info__p">
+                Markant is het centrum voor
+                mantelzorg in Amsterdam, Diemen en Duivendrecht.
+                Markant helpt mantelzorgers balans te vinden tussen zorgen voor
+                een ander en zorgen voor zichzelf.
+                Mantelzorgers kunnen bij ons terecht
+                voor informatie, advies, cursussen, begeleiding en
+                praktische ondersteuning, onder andere door de inzet van vrijwilligers.
+            </p>
+        </article>
+        <article class="info__header">
+            <h2 class="info__h2">
+                Informatie
+            </h2>
+        </article>
+        <article class="info__icon">
+            <div class="info__container">
+                <i class="fa-solid fa-graduation-cap icons"></i>
+                <button class="info__button" onclick="showModal(student)">Meer info</button>
+                                <!-- The Modal -->
+                <div class="info__modal" id="student">
+                    <header class="modal__header">
+                        <h2 class="modal__h2">Student</h2>
+                        <span onclick=closeModal(student) class="modal__close">&times;</span>
+                    </header>
+                    <section class="modal__main">
+                        <p class="modal__paragraph">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium omnis quos autem fuga adipisci iste.
+                        </p>
+                    </section>
+                    <footer class="modal__footer"></footer>
+                </div>
+            </div>
+            <div class="info__container">
+                <i class="fa-solid fa-user-tie icons"></i>
+                <button class="info__button" onclick="showModal(professionals)">Meer info</button>
+                                <!-- The Modal -->
+                <div class="info__modal" id="professionals">
+                    <header class="modal__header">
+                        <h2 class="modal__h2">Professionals</h2>
+                        <span onclick=closeModal(professionals) class="modal__close">&times;</span>
+                    </header>
+                    <section class="modal__main">
+                        <p class="modal__paragraph">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium omnis quos autem fuga adipisci iste.
+                        </p>
+                    </section>
+                    <footer class="modal__footer"></footer>
+                </div>
+            </div>
+            <div class="info__container">
+                <i class="fa-solid fa-users icons"></i>
+                <button class="info__button" onclick="showModal(vrijwilligers)">Meer info</button>
+                    <!-- The Modal -->
+                    <div class="info__modal" id="vrijwilligers">
+                    <header class="modal__header">
+                        <h2 class="modal__h2">Vrijwilligers</h2>
+                        <span onclick=closeModal(vrijwilligers) class="modal__close">&times;</span>
+                    </header>
+                    <section class="modal__main">
+                        <p class="modal__paragraph">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium omnis quos autem fuga adipisci iste.
+                        </p>
+                    </section>
+                    <footer class="modal__footer"></footer>
+                </div>
+            </div>
+            <div class="info__container">
+                <i class="fa-solid fa-hand-holding-hand icons"></i>
+                <button class="info__button" onclick="showModal(mantelzorgers)">Meer info</button>
+                    <!-- The Modal -->
+                    <div class="info__modal" id="mantelzorgers">
+                    <header class="modal__header">
+                        <h2 class="modal__h2">Mantelzorgers</h2>
+                        <span onclick=closeModal(mantelzorgers) class="modal__close">&times;</span>
+                    </header>
+                    <section class="modal__main">
+                        <p class="modal__paragraph">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium omnis quos autem fuga adipisci iste.
+                        </p>
+                    </section>
+                    <footer class="modal__footer"></footer>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section id="agenda" class="agenda">
+        <article class="agenda__header">
+        </article>
+        <section class="agenda__nav">
+            <article class="agenda__title">
+                <h2 class="agenda__h2">
+                    Agenda
+                </h2>
+                <i class="fa-regular fa-calendar-check agenda__icon"></i>
+            </article>
+            <article class="agenda__slider">
+                <button class="slider__next">&lt</button>
+                <button class="slider__button">September</button>
+                <button class="slider__button">Oktober</button>
+                <button class="slider__button">November</button>
+                <button class="slider__next">></button>
+            </article>
+        </section>
+        <ul class="agenda__list">
+            <li class="agenda__listItem">
+                <img class="agenda__img" src="img/header.webp" alt="">
+                <section class="agenda__container">
+                    <h3 class="agenda__h3">Sportdag</h3>
+                    <p class="agenda__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae id molestias eos illo illum quidem officia non fuga soluta reprehenderit sed, ullam eveniet aperiam magnam! Eveniet consectetur eos a magnam!</p>
+                    <button class="agenda__button" onclick="showText(text1)">Lees meer</button>
+                    <div class="agenda__hidden" id="text1">
+                        <p class="hidden__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis doloribus minus repellendus dignissimos error eligendi optio atque aut placeat esse. Ipsam quae cupiditate accusamus harum quo amet, quisquam sequi.</p>
+                    </div>
+                </section>
+            </li>
+            <li class="agenda__listItem">
+                <img class="agenda__img" src="img/header.webp" alt="">
+                <section class="agenda__container">
+                    <h3 class="agenda__h3">Sportdag</h3>
+                    <p class="agenda__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae id molestias eos illo illum quidem officia non fuga soluta reprehenderit sed, ullam eveniet aperiam magnam! Eveniet consectetur eos a magnam!</p>
+                    <button class="agenda__button">Lees meer</button>
+                </section>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 2rem;
+    background: #FAF6F4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav{
+    height: 7rem;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 0.3rem solid black;
+}
+
+.nav__img{
+    width: 15%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.nav__listItem{
+    font-size: 2.5rem;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav__links:hover{
+    color: #7FD4AF;
+    border-bottom: 0.2rem solid black;
+    transition: all .5s ease;
+}
+
+
+.nav__links{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.nav__button{
+    height: 5rem;
+    font-size: 2.5rem;
+    width: 16rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    border: 0.1rem solid #7FD4AF;
+    background: white;
+    font-weight: 300;
+}
+
+.nav__button:hover{
+    cursor: pointer;
+    background: #7FD4AF;
+    color: white;
+    transition: all .5s ease;
+}
+
+.header__banner{
+    height: 90vh;
+    position: relative;
+}
+
+.banner__img{
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), 50%, rgba(255, 255, 255, 0.5)), url("../img/header.webp");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.banner__text{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: #eee;
+    width: 40rem;
+    text-align: center;
+}
+
+.header__h1{
+    font-size: 7rem;
+}
+
+.header__h2{
+    font-size: 2.5rem;
+}
+
+.header__button{
+    height: 5.5rem;
+    font-size: 2.5rem;
+    width: 40rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    border: 0.1rem solid #7FD4AF;
+    background: white;
+    font-weight: 300;
+    background: #7FD4AF;
+    color: white;
+}
+
+.header__button:hover{
+    background: white;
+    color: black;
+    transition: all .5s ease;
+}
+
+svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    border-bottom: 0.2rem solid black;
+}
+
+.info{
+    min-height: 60vh;
+    background: white;
+    border-bottom: 0.2rem solid black;
+    padding-bottom: 2rem;
+}
+
+.info__header{
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__h2{
+    font-size: 3.5rem;
+    border-bottom: 0.2rem solid #7FD4AF;
+}
+
+.info__text{
+    padding-top: 4rem;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+}
+
+.info__p{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.info__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.info__icon{
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.icons{
+    font-size: 4rem;
+    padding: 3rem;
+    border: 0.2rem solid #7FD4AF;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+.info__button{
+    height: 4rem;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    border: 0.1rem solid #7FD4AF;
+    background: white;
+}
+
+.info__button:hover{
+    cursor: pointer;
+}
+
+.info__modal{
+    display: none;
+    height: 40rem;
+    width: 40rem;
+    border: 0.1rem solid black;
+    border-radius: 2rem;
+}
+
+.modal__header{
+    height: 15%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 0.2rem solid #7FD4AF;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.modal__close{
+    font-size: 3rem;
+    color: black;
+    position: absolute;
+    top: 25%;
+    left: 90%;
+}
+
+.modal__close:hover{
+    cursor: pointer;
+    color: #7FD4AF;
+    font-size: 4rem;
+    top: 18%;
+    left: 90%;
+    transition: 0.2s;
+}
+
+.modal__main{
+    height: 75%;
+    padding: 2rem;
+    border-bottom: 0.2rem solid #7FD4AF;
+}
+
+.modal__paragraph{
+    font-size: 1.5rem;
+}
+
+.agenda{
+    min-height: 60vh;
+    background: white;
+    padding: 3rem;
+}
+
+.agenda__h2{
+    font-size: 3.5rem;
+    border-bottom: 0.2rem solid #7FD4AF;
+}
+
+.agenda__nav{
+    border: 0.2rem solid black;
+    border-bottom: none;
+    min-height: 10rem;
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.agenda__title{
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.agenda__icon{
+    font-size: 3.5rem;
+    position: absolute;
+    top: 25%;
+    left: 60%;
+}
+
+.agenda__slider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider__button{
+    width: 10rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 3rem;
+    border: 0.1rem solid #7FD4AF;
+}
+
+.slider__next{
+    font-size: 4rem;
+    background: white;
+    border: none;
+}
+
+.slider__next:hover{
+    cursor: pointer;
+    color: #7FD4AF;
+    transition: 0.2s;
+}
+
+.agenda__list{
+    width: 50%;
+    border: 0.2rem solid black;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.agenda__listItem{
+    min-height: 22rem;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    border: 0.2rem solid black;
+    border-radius: 1.5rem;
+}
+
+.agenda__img{
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 1.3rem;
+    border-bottom-left-radius: 1.3rem;
+}
+
+.agenda__container{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.agenda__h3{
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.agenda__p{
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.agenda__hidden{
+    display: none;
+    height: 10rem;
+}
+
+.hidden__text{
+    font-size: 1.5rem;
+}
+
+.agenda__button{
+    width: 30%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 3rem;
+    border: 0.1rem solid #7FD4AF;
+}
+
+.agenda__button:hover{
+    cursor: pointer;
+}

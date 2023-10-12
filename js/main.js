@@ -26,8 +26,19 @@ function showText(name) {
   };
 }
 
+
+
 function closeText(name) {
   // When the user clicks on <span> (x), close the modal
   var textname = name;
   textname.style.display = "none";
   };
+
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }

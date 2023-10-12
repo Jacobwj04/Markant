@@ -1,0 +1,7 @@
+@use "variables";
+
+body{
+    font-size: 2rem;
+    background: variables.$backgroundColor;
+    font-family: map-get(variables.$fontVars, "font");
+}

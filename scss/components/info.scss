@@ -1,0 +1,148 @@
+@use "../abstracts/variables";
+
+.info{
+    min-height: 60vh;
+    background: white;
+    padding-bottom: 6rem;
+
+    &__header{
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__h2{
+        font-size: 3.5rem;
+        border-bottom: 0.2rem solid #7FD4AF;
+    }
+
+    &__text{
+        padding-top: 4rem;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        padding-bottom: 6rem;
+    }
+
+    &__p{
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__icon{
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+        padding-top: 3rem;
+        flex-wrap: wrap;
+    }
+
+    &__icons{
+        font-size: 4rem;
+        padding: 3rem;
+        border: 0.2rem solid #7FD4AF;
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button{
+        height: 4rem;
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: 3rem;
+        border: 0.1rem solid #7FD4AF;
+        background: white;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.modal{
+    display: none;
+    height: 40rem;
+    width: 40rem;
+    border: 0.1rem solid black;
+    border-radius: 2rem;
+    
+    &__header{
+        height: 15%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-bottom: 0.2rem solid #7FD4AF;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+
+    &__close{
+        font-size: 3rem;
+        color: black;
+        position: absolute;
+        top: 25%;
+        left: 90%;
+
+        &:hover{
+            cursor: pointer;
+            color: #7FD4AF;
+            font-size: 4rem;
+            top: 18%;
+            left: 90%;
+            transition: 0.2s;
+        }
+    }
+
+    &__main{
+        height: 75%;
+        padding: 2rem;
+        border-bottom: 0.2rem solid #7FD4AF;
+    }   
+
+    &__paragraph{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 50rem){
+    
+    .info{
+        padding: 1.5rem;
+        overflow-y: hidden;
+
+        &__text{
+            padding: 1.5rem;
+            text-align: center;
+            width: 100%;
+            margin: 0rem;
+        }
+
+        &__p{
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        &__button{
+            color: black;
+            padding: 0.8rem;
+        }
+    }
+
+    .modal{
+        width: 95vw;
+        overflow-y: hidden;
+    }
+}

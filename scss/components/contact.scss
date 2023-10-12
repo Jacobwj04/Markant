@@ -1,0 +1,132 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.contact{
+    max-height: 60vh;
+    background: white;
+    padding-bottom: 6rem;
+    width: 100%;
+
+    &__header{
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__h2{
+        font-size: 3.5rem;
+        border-bottom: 0.2rem solid #7FD4AF;
+    }
+
+    &__wrapper{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+    }
+
+    &__widget{
+        height: 40rem;
+        width: 40rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 1.5rem;
+
+        &--info{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 4rem;
+            justify-content: space-evenly;
+        }
+
+        &--wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+
+    &__h3{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    &__p{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    &__SubmitBtn {
+        align-items: center;
+        background-clip: padding-box;
+        background-color: #11bf93;
+        border: 1px solid transparent;
+        border-radius: 2remrem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 1.6rem;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: auto;
+      }
+      
+      &__SubmitBtn:hover,
+      &__SubmitBtn:focus {
+        background-color: #06644d;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 0.4rem 1.2rem;
+      }
+      
+      &__SubmitBtn :hover {
+        transform: translateY(-1px);
+      }
+      
+      &__SubmitBtn:active {
+        background-color: #0d8658;
+        box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+        transform: translateY(0);
+      }
+
+}
+
+.widget__form{
+    @include mixins.flexCenter;
+    padding-top: 2rem;
+    gap: 1.5rem;
+
+    &--input{
+        width: 70%;
+        height: 4rem;
+        font-size: 2rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        border: 0.3rem solid #47cd91;
+
+    }
+
+    &--text{
+        width: 70%;
+        height: 15rem;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        @include mixins.flexCenter;
+    }
+}
+

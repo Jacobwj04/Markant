@@ -1,3 +1,21 @@
+<?php
+
+require_once './private/path.php';
+include './private/db/connect.php';
+
+$result = $db->query('SELECT * FROM `config`');
+//Create array to keep all results
+$data = array();
+
+// Fetch Associated Array (1 for SQLITE3_ASSOC)
+while ($res = $result->fetchArray(1)) {
+    //insert row into array
+    array_push($data, $res);
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -7,9 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@300;400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8f8681d983.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
@@ -24,7 +40,7 @@
             <li class="nav__normal--listItem"><a href="#info" class="nav__normal--links">Info</a></li>
             <li class="nav__normal--listItem"><a href="#agenda" class="nav__normal--links">Agenda</a></li>
             <li class="nav__normal--listItem"><a href="#contact" class="nav__normal--links">Contact</a></li>
-            <!-- <li class="nav__normal--listItem"><a href="cms.php" class="nav__normal--links">CMS</a></li> -->
+            <li class="nav__normal--listItem"><a href="cms.php" class="nav__normal--links">CMS</a></li>
             <li class="nav__normal--listItem"><button class="nav__normal--button">Inloggen</button></li>
             <li class="nav__normal--listItem"><button class="nav__normal--button">Aanmelden</button></li>
         </div>
@@ -54,9 +70,7 @@
                 <button class="banner__button">Aanmelden als vrijwilliger</button>
             </article>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#ffffff" fill-opacity="1"
-                    d="M0,192L80,202.7C160,213,320,235,480,229.3C640,224,800,192,960,181.3C1120,171,1280,181,1360,186.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
-                </path>
+                <path fill="#ffffff" fill-opacity="1" d="M0,192L80,202.7C160,213,320,235,480,229.3C640,224,800,192,960,181.3C1120,171,1280,181,1360,186.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
             </svg>
         </section>
     </header>
@@ -94,9 +108,7 @@
                     </header>
                     <section class="modal__main">
                         <p class="modal__paragraph">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi
-                            incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium
-                            omnis quos autem fuga adipisci iste.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium omnis quos autem fuga adipisci iste.
                         </p>
                     </section>
                     <footer class="modal__footer"></footer>
@@ -113,9 +125,7 @@
                     </header>
                     <section class="modal__main">
                         <p class="modal__paragraph">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi
-                            incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium
-                            omnis quos autem fuga adipisci iste.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium omnis quos autem fuga adipisci iste.
                         </p>
                     </section>
                     <footer class="modal__footer"></footer>
@@ -132,9 +142,7 @@
                     </header>
                     <section class="modal__main">
                         <p class="modal__paragraph">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi
-                            incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium
-                            omnis quos autem fuga adipisci iste.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium omnis quos autem fuga adipisci iste.
                         </p>
                     </section>
                     <footer class="modal__footer"></footer>
@@ -151,9 +159,7 @@
                     </header>
                     <section class="modal__main">
                         <p class="modal__paragraph">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi
-                            incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium
-                            omnis quos autem fuga adipisci iste.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem modi debitis animi incidunt! Explicabo, delectus, nam rerum odio inventore quidem dolores tempore accusantium omnis quos autem fuga adipisci iste.
                         </p>
                     </section>
                     <footer class="modal__footer"></footer>
@@ -180,24 +186,21 @@
             </article>
         </section>
         <ul class="agenda__list">
-            <li class="agenda__listItem">
-                <div class="agenda__wrapper">
-                    <img class="agenda__img" src="img/header.webp" alt="">
-                </div>
-                <section class="agenda__container">
-                    <h3 class="agenda__h3">
-                    </h3>
-                    <h3 class="agenda__date">
-                    </h3>
-                    <p class="agenda__p">
-                    </p>
-                    <div class="agenda__hidden" id="text1">
-                        <p class="hidden__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis
-                            doloribus minus repellendus dignissimos error eligendi optio atque aut placeat esse. Ipsam
-                            quae cupiditate accusamus harum quo amet, quisquam sequi.</p>
+            <?php foreach ($data as $row) : ?>
+                <li class="agenda__listItem">
+                    <div class="agenda__wrapper">
+                        <img class="agenda__img" src="img/header.webp" alt="">
                     </div>
-                </section>
-            </li>
+                    <section class="agenda__container">
+                        <h3 class="agenda__h3"><?php echo $row['subject']; ?></h3>
+                        <h3 class="agenda__date"><?php echo $row['date']; ?></h3>
+                        <p class="agenda__p"><?php echo $row['paragraph']; ?></p>
+                        <div class="agenda__hidden" id="text1">
+                            <p class="hidden__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis doloribus minus repellendus dignissimos error eligendi optio atque aut placeat esse. Ipsam quae cupiditate accusamus harum quo amet, quisquam sequi.</p>
+                        </div>
+                    </section>
+                </li>
+            <?php endforeach; ?>
         </ul>
     </section>
     <section id="contact" class="contact">
@@ -212,35 +215,31 @@
                     <input type="text" class="widget__form--input " placeholder="naam">
                     <input type="text" class="widget__form--input" placeholder="achternaam">
                     <input type="email" class="widget__form--input" placeholder="email">
-                    <textarea name="" id="" cols="30" rows="10" class="widget__form--text"
-                        placeholder="Bijvoegingen"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" class="widget__form--text" placeholder="Bijvoegingen"></textarea>
                     <input class="contact__SubmitBtn" type="submit" value="submit" name="submitBtn">
                 </form>
             </section>
             <section class="contact__widget">
                 <div class="contact__map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.1103761290824!2d4.896573915801813!3d52.36841857978568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609be4e5dbbab%3A0xfc010bc27c89024d!2sZwanenburgwal%20206%2C%201011%20JH%20Amsterdam!5e0!3m2!1sen!2snl!4v1667904616684!5m2!1sen!2snl"
-                        width="100%" height="400px" border-radius="15px" style="border:0;" allowfullscreen=""
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.1103761290824!2d4.896573915801813!3d52.36841857978568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609be4e5dbbab%3A0xfc010bc27c89024d!2sZwanenburgwal%20206%2C%201011%20JH%20Amsterdam!5e0!3m2!1sen!2snl!4v1667904616684!5m2!1sen!2snl" width="100%" height="400px" border-radius= "15px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
             <section class="contact__widget contact__widget--info">
                 <div class="contact__widget--wrapper">
-                    <h3 class="contact__h3">Bezoekadres: </h3>
-                    <p class="contact__p">Zwanenburgwal 206 (3e etage), 1011 JH in Amsterdam</p>
+                <h3 class="contact__h3">Bezoekadres: </h3>
+                <p class="contact__p">Zwanenburgwal 206 (3e etage), 1011 JH in Amsterdam</p>
                 </div>
                 <div class="contact__widget--wrapper">
-                    <h3 class="contact__h3">Bereikbaarheid: </h3>
-                    <p class="contact__p">Wij zijn bereikbaar op werkdagen van 8.30 tot 17.00 uur.</p>
+                <h3 class="contact__h3">Bereikbaarheid: </h3>
+                <p class="contact__p">Wij zijn bereikbaar op werkdagen van 8.30 tot 17.00 uur.</p>
                 </div>
                 <div class="contact__widget--wrapper">
-                    <h3 class="contact__h3">Telefoon: </h3>
-                    <p class="contact__p">020 886 88 00</p>
+                <h3 class="contact__h3">Telefoon: </h3>
+                <p class="contact__p">020 886 88 00</p>
                 </div>
                 <div class="contact__widget--wrapper">
-                    <h3 class="contact__h3">E-mail: </h3>
-                    <p class="contact__p">info@markant.org</p>
+                <h3 class="contact__h3">E-mail: </h3>
+                <p class="contact__p">info@markant.org</p>
                 </div>
             </section>
         </section>

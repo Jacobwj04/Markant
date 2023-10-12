@@ -1,0 +1,91 @@
+@use "../abstracts/variables";
+
+.banner{
+    height: 90vh;
+    position: relative;
+
+    &__img{
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), 50%, rgba(255, 255, 255, 0.5)), url("../img/header.webp");
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+    }
+
+    &__text{
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        color: #eee;
+        width: 40rem;
+        text-align: center;
+    }
+
+    &__h1{
+        font-size: 7rem;
+    }
+
+    &__h2{
+        font-size: 2.5rem;
+    }
+
+    &__button{
+        height: 5.5rem;
+        font-size: 2.5rem;
+        width: 40rem;
+        padding: 1rem;
+        border-radius: 3rem;
+        border: 0.1rem solid #7FD4AF;
+        background: white;
+        font-weight: 300;
+        background: #7FD4AF;
+        color: white;
+
+        &:hover{
+            background: white;
+            color: black;
+            transition: all .5s ease;
+        }
+    }
+}
+
+svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 50rem){
+    .banner{
+        height: 90vh;
+        overflow-y: hidden;
+
+        &__img{
+            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), 60%, rgba(255, 255, 255, 0.5)), url("../img/header.webp");
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__text{
+            width: 30rem;
+        }
+
+        &__h1{
+            font-size: 3.5rem;
+        }
+
+        &__h2{
+            font-size: 1.8rem;
+        }
+
+        &__button{
+            height: 4rem;
+            width: 90%;
+            font-size: 2rem;
+            padding: 0.6rem;
+        }
+    }
+}
